@@ -2674,6 +2674,8 @@
               elementt.campo_select_color = find_log_doc.campo_select_color;
               elementt.campo_select_activado =
                 find_log_doc.campo_select_activado;
+              elementt.IdEstadoItems= find_log_doc.IdEstadoItems;
+              elementt.DetalleEstadoItems= find_log_doc.DetalleEstadoItems;
               lista_detalle_find.push(elementt);
             });
           } else if (data_find_log.Estado == 0) {
@@ -2688,37 +2690,14 @@
               lista_detalle_find.push(elementt);
             });
           }
-  console.log(
-            "lista_detalle_find---1 ",
-            JSON.stringify(lista_detalle_find),
-          );
           lista_filtro = JSON.parse(JSON.stringify(lista_detalle_find));
           lista_filtro_aux = JSON.parse(JSON.stringify(lista_detalle_find));
-          lista_find_info_parcial_este_despachadores =
-            lista_detalle_find.filter(
-              (objeto) =>
-                objeto.es_servicio === "0" && objeto.campo_select === "1",
-            ); // no es servicio, estado item observado de este despachador
-          lista_detalle_find = lista_detalle_find.filter(
-            (objeto) =>
-              objeto.es_servicio === "0" &&
-              [1].includes(Number(objeto.Id_tipoentrega)) &&
-              objeto.campo_select === "0",
-          ); // no es servicio, estado item completado y no esta seleccionado por los despachadores
-          lista_detalle_find = lista_detalle_find.concat(
-            lista_find_info_parcial_este_despachadores,
-          );
-          lista_detalle_find = lista_detalle_find.sort(
-            (a, b) => a.posi - b.posi,
-          );
-          console.log(
-            "lista_detalle_find--- ",
-            JSON.stringify(lista_detalle_find),
-          );
+          lista_find_info_parcial_este_despachadores =lista_detalle_find.filter((objeto) => objeto.es_servicio === "0" && objeto.campo_select === "1"); // no es servicio, estado item observado de este despachador
+          lista_detalle_find = lista_detalle_find.filter( (objeto) => objeto.es_servicio === "0" && [3].includes(Number(objeto.Id_tipoentrega)) && objeto.campo_select === "0"); // no es servicio, estado item pendiente y no esta seleccionado por los despachadores
+          lista_detalle_find = lista_detalle_find.concat(lista_find_info_parcial_este_despachadores);
+          lista_detalle_find = lista_detalle_find.sort( (a, b) => a.posi - b.posi);
           const codigosEnDetalle = lista_detalle_find.map((i) => i.CODIGO_ITEM);
-          const objetosNoEnDetalle = lista_filtro.filter(
-            (item) => !codigosEnDetalle.includes(item.CODIGO_ITEM),
-          );
+          const objetosNoEnDetalle = lista_filtro.filter( (item) => !codigosEnDetalle.includes(item.CODIGO_ITEM), );
           lista_filtro = objetosNoEnDetalle;
 
           await enviar_parametro(
