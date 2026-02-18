@@ -2731,6 +2731,7 @@
             existen_items_nocompletados,
           );
         } catch (error) {
+          console.error("Error hhhh :", error);
           manejarError(header, error);
         }
       } else if (data_find.Estado == 0) {
