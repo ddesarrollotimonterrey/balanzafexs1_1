@@ -2643,7 +2643,6 @@ const armo_array = {
         const lista_documento_find = JSON.parse(data_find.Lista);
         try {
           const data_find_log = await getDataParament_json("find_log_traspasos", armo_array);
-
           console.log('gggg '+JSON.stringify(data_find_log));
           if (data_find_log.Estado == 1) {
             let lista_documento_find_log = JSON.parse(data_find_log.Lista);
@@ -2717,6 +2716,7 @@ const armo_array = {
           lista_detalle_find = lista_detalle_find.sort(
             (a, b) => a.posi - b.posi,
           );
+          console.log("lista_detalle_find--- ", JSON.stringify(lista_detalle_find));
           const codigosEnDetalle = lista_detalle_find.map((i) => i.CODIGO_ITEM);
           const objetosNoEnDetalle = lista_filtro.filter(
             (item) => !codigosEnDetalle.includes(item.CODIGO_ITEM),
@@ -2733,6 +2733,7 @@ const armo_array = {
             datad,
             existen_items_nocompletados,
           );
+
         } catch (error) {
           manejarError(header, error);
         }
