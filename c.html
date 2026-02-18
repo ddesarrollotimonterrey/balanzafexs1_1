@@ -737,10 +737,10 @@
         case 4:
           try {
             var title =
-                "Desea guardar los datos actuales?<br>(Generar Nuevo ticket)";
-              if (getVal("ticket") != "0") {
-                title = "Desea Guardar los datos actuales?";
-              } 
+              "Desea guardar los datos actuales?<br>(Generar Nuevo ticket)";
+            if (getVal("ticket") != "0") {
+              title = "Desea Guardar los datos actuales?";
+            }
             setProgressMsg("Verificando...");
             const datad = await sendAsync("server.php", {
               call: "get_datos_user",
@@ -766,13 +766,12 @@
               return;
             }
 
-const armo_array = {
-    U_n_documento: getVal("numerotraspaso"),
-    perfil: data[0].TIPOENTREGA,
-    balanza: data[0].BALANZA,
-    almacen: data[0].ALMACEN
-  };
-
+            const armo_array = {
+              U_n_documento: getVal("numerotraspaso"),
+              perfil: data[0].TIPOENTREGA,
+              balanza: data[0].BALANZA,
+              almacen: data[0].ALMACEN,
+            };
 
             await ejecutar_armo_array(
               armo_array,
@@ -781,8 +780,6 @@ const armo_array = {
               datad,
             );
 
-
-  
             //   var candena = getVal("placa");
             //   var procesado = candena.trim();
             //   send(
@@ -841,9 +838,6 @@ const armo_array = {
             //   }
             //     },
             //   );
-
-
-
           } catch (error) {
             hideProgress();
             alert("Ocurrió un error inesperado");
@@ -1576,8 +1570,6 @@ const armo_array = {
                                               U_HoraSal: null,
                                             });
 
-                               
-
                                             send(
                                               "server.php",
                                               {
@@ -1601,7 +1593,6 @@ const armo_array = {
                                                     "",
                                                   );
                                                   invoices = JSON.parse(dcds);
-                                           
 
                                                   index = index + 1;
                                                   generarF(
@@ -1908,7 +1899,6 @@ const armo_array = {
         "server.php",
         { call: "getURLPeso", user: getSesion("userPeaje") },
         function (data_url) {
-     
           send(
             "server.php",
             { call: "getPeso", user: getSesion("userPeaje") },
@@ -2533,13 +2523,11 @@ const armo_array = {
     return botones;
   }
 
-
-
   async function ejecutar_armo_array(armo_array, header, data_user, datad) {
     try {
       const data1 = await getDataParament_json(
         "existe_documento_en_tabla",
-        armo_array
+        armo_array,
       );
       console.log("Respuesta REAL:", data1);
       hideProgress();
@@ -2642,8 +2630,11 @@ const armo_array = {
       if (data_find.Estado == 1) {
         const lista_documento_find = JSON.parse(data_find.Lista);
         try {
-          const data_find_log = await getDataParament_json("find_log_traspasos", armo_array);
-          console.log('gggg '+JSON.stringify(data_find_log));
+          const data_find_log = await getDataParament_json(
+            "find_log_traspasos",
+            armo_array,
+          );
+          console.log("gggg " + JSON.stringify(data_find_log));
           if (data_find_log.Estado == 1) {
             let lista_documento_find_log = JSON.parse(data_find_log.Lista);
             let lista_documento_find_logg = JSON.parse(
@@ -2716,7 +2707,10 @@ const armo_array = {
           lista_detalle_find = lista_detalle_find.sort(
             (a, b) => a.posi - b.posi,
           );
-          console.log("lista_detalle_find--- ", JSON.stringify(lista_detalle_find));
+          console.log(
+            "lista_detalle_find--- ",
+            JSON.stringify(lista_detalle_find),
+          );
           const codigosEnDetalle = lista_detalle_find.map((i) => i.CODIGO_ITEM);
           const objetosNoEnDetalle = lista_filtro.filter(
             (item) => !codigosEnDetalle.includes(item.CODIGO_ITEM),
@@ -2733,7 +2727,6 @@ const armo_array = {
             datad,
             existen_items_nocompletados,
           );
-
         } catch (error) {
           manejarError(header, error);
         }
@@ -2756,7 +2749,7 @@ const armo_array = {
     datad,
     existen_items_nocompletados,
   ) {
-    console.log('enviar_parametro');
+    console.log("enviar_parametro");
     let itemsModificados = [];
     let lista_detalle_find_unido = [];
     lista_detalle_find_unido =
