@@ -772,8 +772,6 @@ const armo_array = {
     balanza: data[0].BALANZA,
     almacen: data[0].ALMACEN
   };
-console.log('armo_array  123 '+JSON.stringify(armo_array));
-
 
 
             await ejecutar_armo_array(
@@ -1578,10 +1576,7 @@ console.log('armo_array  123 '+JSON.stringify(armo_array));
                                               U_HoraSal: null,
                                             });
 
-                                            console.log(
-                                              "final_array " +
-                                                JSON.stringify(endData),
-                                            );
+                               
 
                                             send(
                                               "server.php",
@@ -1606,10 +1601,7 @@ console.log('armo_array  123 '+JSON.stringify(armo_array));
                                                     "",
                                                   );
                                                   invoices = JSON.parse(dcds);
-                                                  console.log(
-                                                    "docc  " +
-                                                      invoices.DocEntry,
-                                                  );
+                                           
 
                                                   index = index + 1;
                                                   generarF(
@@ -1916,8 +1908,7 @@ console.log('armo_array  123 '+JSON.stringify(armo_array));
         "server.php",
         { call: "getURLPeso", user: getSesion("userPeaje") },
         function (data_url) {
-          console.log("url_sap  " + data_url);
-
+     
           send(
             "server.php",
             { call: "getPeso", user: getSesion("userPeaje") },
@@ -2546,7 +2537,6 @@ console.log('armo_array  123 '+JSON.stringify(armo_array));
 
   async function ejecutar_armo_array(armo_array, header, data_user, datad) {
     try {
-      console.log("ccccc e " + JSON.stringify(armo_array));
       const data1 = await getDataParament_json(
         "existe_documento_en_tabla",
         armo_array
@@ -2649,17 +2639,10 @@ console.log('armo_array  123 '+JSON.stringify(armo_array));
     };
     try {
       const data_find = await getDataParament_json("find", armo_array);
-      console.log("data_find  " + JSON.stringify(data_find));
       if (data_find.Estado == 1) {
         const lista_documento_find = JSON.parse(data_find.Lista);
         try {
-          const data_find_log = await getDataParament_json(
-            "find_log_traspasos",
-            armo_array,
-          );
-          console.log(
-            "data_find  data_find_log  " + JSON.stringify(data_find_log),
-          );
+          const data_find_log = await getDataParament_json("find_log_traspasos", armo_array);
           if (data_find_log.Estado == 1) {
             let lista_documento_find_log = JSON.parse(data_find_log.Lista);
             let lista_documento_find_logg = JSON.parse(
@@ -2667,9 +2650,6 @@ console.log('armo_array  123 '+JSON.stringify(armo_array));
             );
             existen_items_nocompletados = JSON.parse(
               lista_documento_find_log[0].existen_items_nocompletados,
-            );
-            console.log(
-              "existen_items_nocompletados " + existen_items_nocompletados,
             );
             lista_documento_find.forEach((elementt) => {
               const find_log_doc = lista_documento_find_logg.find(
@@ -2933,7 +2913,6 @@ console.log('armo_array  123 '+JSON.stringify(armo_array));
 
   function getDataParament(nombre) {
     const baseUrl = `http://app-web-mty/web_service_entrega_traspasos/servicio.php?nombre=${nombre}`;
-    console.log("baseUrl " + baseUrl);
     return fetch(baseUrl).then((res) => res.json());
   }
 
@@ -2941,7 +2920,6 @@ console.log('armo_array  123 '+JSON.stringify(armo_array));
     const baseUrl =
       "http://app-web-mty/web_service_entrega_traspasos/servicio.php?nombre=" +
       encodeURIComponent(nombre);
-    console.log(baseUrl);
 
     return fetch(baseUrl, {
       method: "POST",
@@ -3023,13 +3001,6 @@ console.log('armo_array  123 '+JSON.stringify(armo_array));
 
     if (sw) {
       var infor11 = null;
-
-      // if(origen == "CONTADO"){
-      //   console.log('DATOS_INFOR INVOICE datos  1 ' + invoices['DocTotal']);
-      // infor11=invoices['DocTotal'];
-      // infor11=infor11.toString();
-      // console.log('DATOS_INFOR INVOICE datos  1 ' + infor11);
-      // }
 
       endData.push({
         Code: getVal("id"),
