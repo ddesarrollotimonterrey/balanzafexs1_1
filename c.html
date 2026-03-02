@@ -4,11 +4,7 @@
       <div class="nav-wrapper" style="background: var(--theme-color)">
         <a id="title" class="brand-logo" style="left: 0.5em"></a>
         <ul class="right">
-          <li
-            id="exit"
-            class="tooltip"
-            data-position="left"
-            data-tooltip="Cerrar">
+          <li id="exit" class="tooltip" data-position="left" data-tooltip="Cerrar">
             <a id="go_back"><i class="material-icons">close</i></a>
           </li>
         </ul>
@@ -30,39 +26,23 @@
     <div class="row" style="padding: 0.5em">
       <div class="col s4">
         <div class="input-field col s6">
-          <input
-            id="fecha1"
-            type="text"
-            class="form"
-            autocomplete="off"
-            disabled /><label for="fecha" class="label">PRIMER PESAJE</label>
+          <input id="fecha1" type="text" class="form" autocomplete="off" disabled /><label for="fecha"
+            class="label">PRIMER PESAJE</label>
         </div>
         <div class="input-field col s6">
-          <input
-            id="fecha2"
-            type="text"
-            class="form"
-            autocomplete="off"
-            disabled /><label for="hora" class="label">SEGUNDO PESAJE</label>
+          <input id="fecha2" type="text" class="form" autocomplete="off" disabled /><label for="hora"
+            class="label">SEGUNDO PESAJE</label>
         </div>
         <div class="input-field col s6">
-          <input
-            id="usuario"
-            type="text"
-            class="form"
-            autocomplete="off"
-            disabled /><label for="usuario" class="label">USUARIO</label>
+          <input id="usuario" type="text" class="form" autocomplete="off" disabled /><label for="usuario"
+            class="label">USUARIO</label>
         </div>
       </div>
       <div class="col s4"></div>
       <div class="col s4">
         <div class="input-field col s6">
-          <input
-            id="sucursal"
-            type="text"
-            class="form"
-            autocomplete="off"
-            disabled /><label for="sucursal" class="label">SUCURSAL</label>
+          <input id="sucursal" type="text" class="form" autocomplete="off" disabled /><label for="sucursal"
+            class="label">SUCURSAL</label>
         </div>
         <div class="input-field col s6">
           <select id="estado" class="nat form" disabled>
@@ -74,29 +54,18 @@
         </div>
         <div class="input-field col s6"></div>
         <div class="input-field col s6">
-          <input
-            id="ticket"
-            type="text"
-            class="form"
-            autocomplete="off"
-            disabled /><label for="ticket" class="label">TICKET</label>
+          <input id="ticket" type="text" class="form" autocomplete="off" disabled /><label for="ticket"
+            class="label">TICKET</label>
         </div>
       </div>
-      <div
-        class="col s12"
-        style="height: 1px; background: rgba(0, 0, 0, 0.14)"></div>
+      <div class="col s12" style="height: 1px; background: rgba(0, 0, 0, 0.14)"></div>
 
       <div class="col s6 card">
         <span class="card-title col s12">SERVICIO</span>
         <div class="input-field col s12">
           <!-- <form action="otros.php" method="post"  target="_blank"  id="regi" name="regi"> -->
           <form action="otros.php" method="post" id="regi" name="regi">
-            <input
-              type="text"
-              style="display: none"
-              name="code"
-              id="code"
-              value="0" />
+            <input type="text" style="display: none" name="code" id="code" value="0" />
           </form>
 
           <select id="origen" class="nat form">
@@ -130,87 +99,40 @@
       <div class="col s12 card">
         <span class="card-title col s12">VEHICULO</span>
         <div class="input-field col s2">
-          <input
-            id="placa"
-            type="text"
-            maxlength="9"
-            class="form autocomplete"
-            autocomplete="off"
-            placeholder="Ingresar" /><label for="placa"
-            class="label">PLACA</label>
+          <input id="placa" type="text" maxlength="9" class="form autocomplete" autocomplete="off"
+            placeholder="Ingresar" /><label for="placa" class="label">PLACA</label>
         </div>
         <div class="input-field col s2">
-          <input
-            id="marca"
-            maxlength="14"
-            type="text"
-            class="form"
-            autocomplete="off"
-            placeholder="Ingresar" /><label for="marca"
-            class="label">MARCA</label>
+          <input id="marca" maxlength="14" type="text" class="form" autocomplete="off" placeholder="Ingresar" /><label
+            for="marca" class="label">MARCA</label>
         </div>
         <div class="input-field col s2">
-          <input
-            id="color"
-            maxlength="14"
-            type="text"
-            class="form"
-            autocomplete="off"
-            placeholder="Ingresar" /><label for="color"
-            class="label">COLOR</label>
+          <input id="color" maxlength="14" type="text" class="form" autocomplete="off" placeholder="Ingresar" /><label
+            for="color" class="label">COLOR</label>
         </div>
         <div class="input-field col s3">
-          <input
-            id="conductor"
-            type="text"
-            class="form"
-            autocomplete="off"
-            maxlength="34"
-            placeholder="Ingresar" /><label for="conductor"
-            class="label">CONDUCTOR</label>
+          <input id="conductor" type="text" class="form" autocomplete="off" maxlength="34"
+            placeholder="Ingresar" /><label for="conductor" class="label">CONDUCTOR</label>
         </div>
         <div class="input-field col s2">
-          <input
-            id="ci_conductor"
-            type="text"
-            class="form"
-            autocomplete="off"
-            maxlength="15"
-            placeholder="Ingresar" /><label for="ci_conductor"
-            class="label">CI.</label>
+          <input id="ci_conductor" type="text" class="form" autocomplete="off" maxlength="15"
+            placeholder="Ingresar" /><label for="ci_conductor" class="label">CI.</label>
         </div>
         <div class="input-field col s1">
-          <input
-            id="ci_exp"
-            type="text"
-            class="form"
-            autocomplete="off"
-            maxlength="5"
-            placeholder="Ingresar" /><label for="ci_exp"
-            class="label">EXP.</label>
+          <input id="ci_exp" type="text" class="form" autocomplete="off" maxlength="5" placeholder="Ingresar" /><label
+            for="ci_exp" class="label">EXP.</label>
         </div>
       </div>
 
       <div class="col s12 card" id="sectorFactura">
         <span class="card-title col s12">FACTURA</span>
         <div class="input-field col s3">
-          <input
-            id="nit"
-            type="text"
-            class="form autocomplete"
-            autocomplete="off"
-            maxlength="14"
+          <input id="nit" type="text" class="form autocomplete" autocomplete="off" maxlength="14"
             placeholder="Ingresar" /><label for="nit" class="label">NIT</label>
         </div>
         <div class="input-field col s9">
-          <input
-            id="razon_social"
-            type="text"
-            class="form"
-            autocomplete="off"
-            maxlength="49"
-            placeholder="Ingresar" /><label for="razon_social"
-            class="label">RAZON SOCIAL</label>
+          <input id="razon_social" type="text" class="form" autocomplete="off" maxlength="49"
+            placeholder="Ingresar" /><label for="razon_social" class="label">RAZON SOCIAL</label>
         </div>
       </div>
 
@@ -218,55 +140,33 @@
         <span class="card-title col s12">PESAJE</span>
         <div class="col s4">
           <div class="input-field col s6">
-            <input
-              id="peso1"
-              type="text"
-              class="form int"
-              autocomplete="off"
-              readonly /><label for="peso1" class="label">PESO TARA (KG)</label>
+            <input id="peso1" type="text" class="form int" autocomplete="off" readonly /><label for="peso1"
+              class="label">PESO TARA (KG)</label>
           </div>
-          <button
-            id="getPeso1"
-            class="waves-effect btn"
-            style="margin-top: 1.5em">
+          <button id="getPeso1" class="waves-effect btn" style="margin-top: 1.5em">
             Obtener
           </button>
         </div>
         <div class="col s4">
           <div class="input-field col s6">
-            <input
-              id="peso2"
-              type="text"
-              class="form int"
-              autocomplete="off"
-              readonly /><label for="peso2" class="label">PESO BRUTO
+            <input id="peso2" type="text" class="form int" autocomplete="off" readonly /><label for="peso2"
+              class="label">PESO BRUTO
               (KG)</label>
           </div>
-          <button
-            id="getPeso2"
-            class="waves-effect btn"
-            style="margin-top: 1.5em">
+          <button id="getPeso2" class="waves-effect btn" style="margin-top: 1.5em">
             Obtener
           </button>
         </div>
         <div class="col s4">
           <div class="input-field col s4">
-            <input
-              id="neto"
-              type="text"
-              class="form int"
-              autocomplete="off"
-              readonly /><label for="neto" class="label">NETO (KG)</label>
+            <input id="neto" type="text" class="form int" autocomplete="off" readonly /><label for="neto"
+              class="label">NETO (KG)</label>
           </div>
         </div>
       </div>
 
-      <button
-        id="saver"
-        class="btn-floating btn-large waves-effect blue hide tooltip"
-        data-position="left"
-        data-tooltip="Guardar"
-        style="position: fixed; bottom: 1em; right: 1em">
+      <button id="saver" class="btn-floating btn-large waves-effect blue hide tooltip" data-position="left"
+        data-tooltip="Guardar" style="position: fixed; bottom: 1em; right: 1em">
         <i class="material-icons">save</i>
       </button>
     </div>
@@ -501,8 +401,8 @@
             querySelector("#documentos").innerHTML = ``;
             clients.forEach(
               (el) =>
-                (querySelector("#razon_social").innerHTML +=
-                  `<option value="${el.RAZON}">${el.RAZON}</option>`),
+              (querySelector("#razon_social").innerHTML +=
+                `<option value="${el.RAZON}">${el.RAZON}</option>`),
             );
             querySelector("#razon_social").onchange = function () {
               if (this.value == "OTRO") {
@@ -619,8 +519,8 @@
             querySelector("#documentos").innerHTML = ``;
             clients.forEach(
               (el) =>
-                (querySelector("#razon_social").innerHTML +=
-                  `<option value="${el.RAZON}">${el.RAZON}</option>`),
+              (querySelector("#razon_social").innerHTML +=
+                `<option value="${el.RAZON}">${el.RAZON}</option>`),
             );
             querySelector("#razon_social").onchange = function () {
               if (this.value == "OTRO") {
@@ -722,15 +622,12 @@
       switch (selec) {
         case 4:
           try {
-            var title =
-              "Desea guardar los datos actuales?<br>(Generar Nuevo ticket)";
+            var title = "Desea guardar los datos actuales?<br>(Generar Nuevo ticket)";
             if (getVal("ticket") != "0") {
               title = "Desea Guardar los datos actuales?";
             }
             setProgressMsg("Verificando...");
-            const datad = await sendAsync("server.php", {
-              call: "get_datos_user",
-            });
+            const datad = await sendAsync("server.php", {call: "get_datos_user"});
             if (!datad?.length) {
               hideProgress();
               alert("No se recibieron datos del usuario.");
@@ -742,16 +639,12 @@
               alert("Usuario no encontrado.");
               return;
             }
-            const data = await sendAsync("server.php", {
-              call: "getData_info",
-              user: userr,
-            });
+            const data = await sendAsync("server.php", {call: "getData_info", user: userr,});
             if (!data?.length) {
               hideProgress();
               alert(`No se recibieron datos de la balanza para ${userr}`);
               return;
             }
-
             const armo_array = {
               U_n_documento: getVal("numerotraspaso"),
               perfil: data[0].TIPOENTREGA,
@@ -759,66 +652,63 @@
               almacen: data[0].ALMACEN,
             };
 
-            await ejecutar_armo_array( armo_array, "TRANSFERENCIA DE MATERIAL", data, datad, );
+            //  await ejecutar_armo_array( armo_array, "TRANSFERENCIA DE MATERIAL", data, datad, ); ----prueba
 
-            //   var candena = getVal("placa");
-            //   var procesado = candena.trim();
-            //   send(
-            //     "server.php",
-            //     {
-            //       call: "getPlacaCP",
-            //       idSesion: getSesion("idSesion"),
-            //       placa: procesado,
-            //     },
-            //    async function (data) {
-            //      hideProgress();
-            //   if (getVal("ticket") != "0") {
-            //     showConfirm(
-            //       title,
-            //    async   function () {
-            //      //   finishPesaje();
-            //      await   ejecutar_armo_array(armo_array,"TRANSFERENCIA DE MATERIAL",data, datad);
-            //       },
-            //       null,
-            //     );
-            //     return;
-            //   }
+            var candena = getVal("placa");
+            var procesado = candena.trim();
+            send( "server.php",{ call: "getPlacaCP",idSesion: getSesion("idSesion"),  placa: procesado}, async function (data) {
+                hideProgress();
+                if (getVal("ticket") != "0") {
+                  showConfirm(
+                    title,
+                    async function () {
+                      //   finishPesaje();
+                    //  await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
+                    },
+                    null,
+                  );
+                  return;
+                }
 
-            //   if (data.length == 1) {
-            //    // finishPesaje();
-            //  await   ejecutar_armo_array(armo_array,"TRANSFERENCIA DE MATERIAL",data, datad);
-            //     return;
-            //   }
-            //   if (data.length > 1) {
-            //     var tdetalle = "";
-            //     for (ii = 0; ii < data.length; ii++) {
-            //       var ccf = ii + 1;
-            //       if (
-            //         (data[ii]["U_Estado"] == "1") |
-            //         (data[ii]["U_Estado"] == "4")
-            //       ) {
-            //         var dadf =
-            //           ccf +
-            //           `. Este Nº de placa tiene un documento pendiente de finalizacion (Ticket : ${data[ii]["U_NroTicket"]})  en la ${data[ii]["U_Sucursal"]}, tipo de Servicio  ${data[ii]["U_Origen"]}`;
-            //         tdetalle = tdetalle + "<br>" + dadf;
-            //       }
-            //     }
-            //     show(tdetalle);
-            //     return;
-            //   } else {
-            //     if (data.length == 0) {
-            //       showConfirm(
-            //         title,
-            //       async  function () {
-            //       //    finishPesaje();
-            //          await ejecutar_armo_array(armo_array,"TRANSFERENCIA DE MATERIAL",data, datad);
-            //         },
-            //         null,
-            //       );
-            //     }
-            //   }
-            //     },
-            //   );
+                if (data.length == 1) {
+                  // finishPesaje();
+                 // await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
+                  return;
+                }
+                if (data.length > 1) {
+                  var tdetalle = "";
+                  for (ii = 0; ii < data.length; ii++) {
+                    var ccf = ii + 1;
+                    if (
+                      (data[ii]["U_Estado"] == "1") |
+                      (data[ii]["U_Estado"] == "4")
+                    ) {
+                      var dadf =
+                        ccf +
+                        `. Este Nº de placa tiene un documento pendiente de finalizacion (Ticket : ${data[ii]["U_NroTicket"]})  en la ${data[ii]["U_Sucursal"]}, tipo de Servicio  ${data[ii]["U_Origen"]}`;
+                      tdetalle = tdetalle + "<br>" + dadf;
+                    }
+                  }
+                  show(tdetalle);
+                  return;
+                } else {
+                  if (data.length == 0) {
+                    alert(data.length);
+                    showConfirm(
+                      title,
+                      async function () {
+                        //    finishPesaje();
+                       await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
+                      },
+                      null,
+                    );
+                  }
+                }
+              });
+
+
+
+
           } catch (error) {
             hideProgress();
             alert("Ocurrió un error inesperado");
@@ -1838,7 +1728,7 @@
         if (ele.value.length == 0) {
           show(
             "Complete el campo " +
-              ele.parentNode.querySelector("label").innerHTML,
+            ele.parentNode.querySelector("label").innerHTML,
           );
           sw = false;
           return;
@@ -1860,7 +1750,7 @@
         if (ele.value.length == 0) {
           show(
             "Complete el campo " +
-              ele.parentNode.querySelector("label").innerHTML,
+            ele.parentNode.querySelector("label").innerHTML,
           );
           sw = false;
           return;
@@ -2506,7 +2396,7 @@
 
   async function ejecutar_armo_array(armo_array, header, data_user, datad) {
     try {
-      const data1 = await getDataParament_json( "existe_documento_en_tabla", armo_array );
+      const data1 = await getDataParament_json("existe_documento_en_tabla", armo_array);
       console.log("Respuesta REAL:", JSON.stringify(data1));
       hideProgress();
       if (data1.Estado == 1) {
@@ -2615,7 +2505,7 @@
             armo_array,
           );
           console.log("gggg " + JSON.stringify(data_find_log));
-             console.log("items_estado " + JSON.stringify(items_estado));
+          console.log("items_estado " + JSON.stringify(items_estado));
           if (data_find_log.Estado == 1) {
             let lista_documento_find_log = JSON.parse(data_find_log.Lista);
             let lista_documento_find_logg = JSON.parse(
@@ -2638,23 +2528,24 @@
               elementt.User_despachador = find_log_doc.User_despachador;
               elementt.Nombre_despachador = find_log_doc.Nombre_despachador;
               elementt.IdTipoRegularizacion = find_log_doc.IdTipoRegularizacion;
-              elementt.DetalleTipoRegularizacion =find_log_doc.DetalleTipoRegularizacion;
+              elementt.DetalleTipoRegularizacion = find_log_doc.DetalleTipoRegularizacion;
               elementt.NumeroDocumentoR = find_log_doc.NumeroDocumentoR;
               elementt.canEditComentario = find_log_doc.canEditComentario;
-              elementt.U_fecha_registro_x_items_regularizado =find_log_doc.U_fecha_registro_x_items_regularizado;
-              elementt.U_fecha_registro_x_items =find_log_doc.U_fecha_registro_x_items;
-              elementt.Comentario_id_tipoentrega =find_log_doc.Comentario_id_tipoentrega;
-              elementt.Cantidad_id_tipoentrega =find_log_doc.Cantidad_id_tipoentrega;
+              elementt.U_fecha_registro_x_items_regularizado = find_log_doc.U_fecha_registro_x_items_regularizado;
+              elementt.U_fecha_registro_x_items = find_log_doc.U_fecha_registro_x_items;
+              elementt.Comentario_id_tipoentrega = find_log_doc.Comentario_id_tipoentrega;
+              elementt.Cantidad_id_tipoentrega = find_log_doc.Cantidad_id_tipoentrega;
               elementt.campo_select = find_log_doc.campo_select;
               elementt.campo_select_color = find_log_doc.campo_select_color;
               elementt.campo_select_activado = find_log_doc.campo_select_activado;
-              elementt.IdEstadoItems= find_log_doc.IdEstadoItems;
-              elementt.DetalleEstadoItems= find_log_doc.DetalleEstadoItems;
+              elementt.IdEstadoItems = find_log_doc.IdEstadoItems;
+              elementt.DetalleEstadoItems = find_log_doc.DetalleEstadoItems;
               lista_detalle_find.push(elementt);
             });
           } else if (data_find_log.Estado == 0) {
             existen_items_nocompletados = lista_documento_find.length;
-            lista_documento_find.forEach((elementt) => { const userFound = items_estado.find(
+            lista_documento_find.forEach((elementt) => {
+              const userFound = items_estado.find(
                 (user) =>
                   parseInt(user.Id) === parseInt(elementt.Id_tipoentrega),
               );
@@ -2665,12 +2556,12 @@
           }
           lista_filtro = JSON.parse(JSON.stringify(lista_detalle_find));
           lista_filtro_aux = JSON.parse(JSON.stringify(lista_detalle_find));
-          lista_find_info_parcial_este_despachadores =lista_detalle_find.filter((objeto) => objeto.es_servicio === "0" && objeto.campo_select === "1"); // no es servicio, estado item observado de este despachador
-          lista_detalle_find = lista_detalle_find.filter( (objeto) => objeto.es_servicio === "0" && [3].includes(Number(objeto.Id_tipoentrega)) && objeto.campo_select === "0"); // no es servicio, estado item pendiente y no esta seleccionado por los despachadores
+          lista_find_info_parcial_este_despachadores = lista_detalle_find.filter((objeto) => objeto.es_servicio === "0" && objeto.campo_select === "1"); // no es servicio, estado item observado de este despachador
+          lista_detalle_find = lista_detalle_find.filter((objeto) => objeto.es_servicio === "0" && [3].includes(Number(objeto.Id_tipoentrega)) && objeto.campo_select === "0"); // no es servicio, estado item pendiente y no esta seleccionado por los despachadores
           lista_detalle_find = lista_detalle_find.concat(lista_find_info_parcial_este_despachadores);
-          lista_detalle_find = lista_detalle_find.sort( (a, b) => a.posi - b.posi);
+          lista_detalle_find = lista_detalle_find.sort((a, b) => a.posi - b.posi);
           const codigosEnDetalle = lista_detalle_find.map((i) => i.CODIGO_ITEM);
-          const objetosNoEnDetalle = lista_filtro.filter( (item) => !codigosEnDetalle.includes(item.CODIGO_ITEM), );
+          const objetosNoEnDetalle = lista_filtro.filter((item) => !codigosEnDetalle.includes(item.CODIGO_ITEM),);
           lista_filtro = objetosNoEnDetalle;
 
           await enviar_parametro(
