@@ -664,10 +664,10 @@
                     //  await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
                      return;
                 }
-                if (datap.length == 1) {
+               if (getVal("ticket") === "0") {
                    hideProgress();
                  //finishPesaje();
-                 //  await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
+                  await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
                  return;
                 }
                 if (datap.length > 1) {
@@ -681,13 +681,6 @@
                   }
                   hideProgress();
                   return;
-                } else {
-                  if (datap.length == 0) {
-                    alert(datap.length);
-                    //    finishPesaje();
-                    //await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
-                    return;
-                  }
                 }
             }else{
               hideProgress();
