@@ -2451,7 +2451,7 @@
       botones.push({
         texto: data.respuesta2,
         callback: async () => {
-          await getListatipoentrega(header, armo_array, data_user, datad);
+          await getListatipoentrega(header, armo_array, data_user, datad, data);
         },
       });
     }
@@ -2478,7 +2478,7 @@
       botones.push({
         texto: data.respuesta2,
         callback: async () => {
-          await getListatipoentrega(header, armo_array, data_user, datad);
+          await getListatipoentrega(header, armo_array, data_user, datad, data);
         },
       });
     }
@@ -2568,7 +2568,7 @@
     }
   }
 
-  async function getListatipoentrega(header, armo_array, data_user, datad) {
+  async function getListatipoentrega(header, armo_array, data_user, datad, datall) {
     setProgressMsg("Guardando");
     try {
       const data1 = await getDataParament("lista_tipo_traspaso");
@@ -2580,6 +2580,7 @@
           armo_array,
           data_user,
           datad,
+          datall
         );
       }
     } catch (error) {
@@ -2593,6 +2594,7 @@
     armo_arrayn,
     data_user,
     datad,
+    datall
   ) {
     let lista_detalle_find = [];
     let lista_filtro = [];
@@ -2636,30 +2638,23 @@
               elementt.User_despachador = find_log_doc.User_despachador;
               elementt.Nombre_despachador = find_log_doc.Nombre_despachador;
               elementt.IdTipoRegularizacion = find_log_doc.IdTipoRegularizacion;
-              elementt.DetalleTipoRegularizacion =
-                find_log_doc.DetalleTipoRegularizacion;
+              elementt.DetalleTipoRegularizacion =find_log_doc.DetalleTipoRegularizacion;
               elementt.NumeroDocumentoR = find_log_doc.NumeroDocumentoR;
               elementt.canEditComentario = find_log_doc.canEditComentario;
-              elementt.U_fecha_registro_x_items_regularizado =
-                find_log_doc.U_fecha_registro_x_items_regularizado;
-              elementt.U_fecha_registro_x_items =
-                find_log_doc.U_fecha_registro_x_items;
-              elementt.Comentario_id_tipoentrega =
-                find_log_doc.Comentario_id_tipoentrega;
-              elementt.Cantidad_id_tipoentrega =
-                find_log_doc.Cantidad_id_tipoentrega;
+              elementt.U_fecha_registro_x_items_regularizado =find_log_doc.U_fecha_registro_x_items_regularizado;
+              elementt.U_fecha_registro_x_items =find_log_doc.U_fecha_registro_x_items;
+              elementt.Comentario_id_tipoentrega =find_log_doc.Comentario_id_tipoentrega;
+              elementt.Cantidad_id_tipoentrega =find_log_doc.Cantidad_id_tipoentrega;
               elementt.campo_select = find_log_doc.campo_select;
               elementt.campo_select_color = find_log_doc.campo_select_color;
-              elementt.campo_select_activado =
-                find_log_doc.campo_select_activado;
+              elementt.campo_select_activado = find_log_doc.campo_select_activado;
               elementt.IdEstadoItems= find_log_doc.IdEstadoItems;
               elementt.DetalleEstadoItems= find_log_doc.DetalleEstadoItems;
               lista_detalle_find.push(elementt);
             });
           } else if (data_find_log.Estado == 0) {
             existen_items_nocompletados = lista_documento_find.length;
-            lista_documento_find.forEach((elementt) => {
-              const userFound = items_estado.find(
+            lista_documento_find.forEach((elementt) => { const userFound = items_estado.find(
                 (user) =>
                   parseInt(user.Id) === parseInt(elementt.Id_tipoentrega),
               );
@@ -2687,6 +2682,7 @@
             data_user,
             datad,
             existen_items_nocompletados,
+            datall
           );
         } catch (error) {
           console.error("Error hhhh :", error);
@@ -2710,6 +2706,7 @@
     data_user,
     datad,
     existen_items_nocompletados,
+    datall
   ) {
     console.log("enviar_parametro");
     let itemsModificados = [];
@@ -2750,6 +2747,7 @@
       itemsModificados: itemsModificados,
       existen_items_nocompletados: existen_items_nocompletados,
       tipo_usuario: 6,
+      lugar: datall.lugar
     };
     console.log("datos a " + JSON.stringify(a));
     try {
@@ -2765,6 +2763,9 @@
       manejarError(header, error);
     }
   }
+
+
+
 
   function manejarError(headerr, error) {
     var sin_coneccion_internet = "Sin Conexión a Internet !!!";
