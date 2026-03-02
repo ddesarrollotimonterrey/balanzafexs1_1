@@ -656,53 +656,49 @@
 
             var candena = getVal("placa");
             var procesado = candena.trim();
-            send( "server.php",{ call: "getPlacaCP",idSesion: getSesion("idSesion"),  placa: procesado}, async function (data) {
-                hideProgress();
+            const datap = await sendAsync("server.php", {call: "getPlacaCP", idSesion: getSesion("idSesion"),  placa: procesado});
+            if (datap.length>0) {
                 if (getVal("ticket") != "0") {
-                  showConfirm(
-                    title,
-                    async function () {
-                      //   finishPesaje();
+                   hideProgress();
+                   //   finishPesaje();
                     //  await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
-                    },
-                    null,
-                  );
-                  return;
+                     return;
                 }
-
-                if (data.length == 1) {
-                  // finishPesaje();
-                 // await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
-                  return;
+                if (datap.length == 1) {
+                   hideProgress();
+                 //finishPesaje();
+                 //  await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
+                 return;
                 }
-                if (data.length > 1) {
+                if (datap.length > 1) {
                   var tdetalle = "";
-                  for (ii = 0; ii < data.length; ii++) {
+                  for (ii = 0; ii < datap.length; ii++) {
                     var ccf = ii + 1;
-                    if (
-                      (data[ii]["U_Estado"] == "1") |
-                      (data[ii]["U_Estado"] == "4")
-                    ) {
-                      var dadf =
-                        ccf +
-                        `. Este Nº de placa tiene un documento pendiente de finalizacion (Ticket : ${data[ii]["U_NroTicket"]})  en la ${data[ii]["U_Sucursal"]}, tipo de Servicio  ${data[ii]["U_Origen"]}`;
+                    if ((datap[ii]["U_Estado"] == "1") | (datap[ii]["U_Estado"] == "4") ) {
+                      var dadf =ccf + `. Este Nº de placa tiene un documento pendiente de finalizacion (Ticket : ${datap[ii]["U_NroTicket"]})  en la ${datap[ii]["U_Sucursal"]}, tipo de Servicio  ${datap[ii]["U_Origen"]}`;
                       tdetalle = tdetalle + "<br>" + dadf;
                     }
                   }
-                  show(tdetalle);
+                  hideProgress();
                   return;
                 } else {
-                  if (data.length == 0) {
-                    alert(data.length);
-                 //   showConfirm(
-                    //  title,
-                    //  async function () {
-                        //    finishPesaje();
-                       await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
-                    //  }, null);
+                  if (datap.length == 0) {
+                    alert(datap.length);
+                    //    finishPesaje();
+                    //await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
+                    return;
                   }
                 }
-              });
+            }else{
+              hideProgress();
+              alert(`No existe datos de placa`);
+              return;
+            }
+
+              
+              
+
+     
 
 
 
