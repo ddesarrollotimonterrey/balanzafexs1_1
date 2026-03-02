@@ -652,21 +652,15 @@
               almacen: data[0].ALMACEN,
             };
 
-            //  await ejecutar_armo_array( armo_array, "TRANSFERENCIA DE MATERIAL", data, datad, ); ----prueba
-
             var candena = getVal("placa");
             var procesado = candena.trim();
             const datap = await sendAsync("server.php", {call: "getPlacaCP", idSesion: getSesion("idSesion"),  placa: procesado});
             if (datap.length>0) {
                 if (getVal("ticket") != "0") {
-                   hideProgress();
-                   //   finishPesaje();
-                    //  await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
+                  await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
                      return;
                 }
                if (getVal("ticket") === "0") {
-                   hideProgress();
-                 //finishPesaje();
                   await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
                  return;
                 }
@@ -2635,7 +2629,7 @@
       );
       mensaje_almacen(header, resp.Mensaje, {
         texto: "OK",
-        callback: () => console.log("Se cerró el alert"),
+        callback: () => finishPesaje(),
       });
     } catch (error) {
       manejarError(header, error);
