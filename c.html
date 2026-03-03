@@ -68,13 +68,18 @@
             <input type="text" style="display: none" name="code" id="code" value="0" />
           </form>
 
-          <select id="origen" class="nat form">
+
+          <!--cargado1-->
+          <select id="origen" class="nat form"></select>
+          <!-- <select id="origen" class="nat form">
             <option value="CONTADO">CONTADO</option>
             <option value="CREDITO">CREDITO</option>
             <option value="CONTADO">REEMPLAZO TICKET CONTADO</option>
             <option value="OTROS">OTROS SERVICIOS</option>
             <option value="TRANSFERENCIAM">TRANSFERENCIA DE MATERIAL</option>
-          </select>
+          </select> -->
+
+
           <label>TIPO DE SERVICIO</label>
         </div>
         <div id="documentos" class="input-field col s4"></div>
@@ -2074,15 +2079,38 @@
     });
   }
 
-  function loadComponents(onfinish) {
+ // cargado1
+  function loadComponents(onfinish) { 
     setProgressMsg("Cargando...");
-
     send("server.php", { call: "getRazones" }, function (data) {
+
+const select = document.getElementById("origen");
+
+const opciones = [
+  { value: "CONTADO", text: "CONTADO" },
+  { value: "CREDITO", text: "CREDITO" },
+  { value: "CONTADO", text: "REEMPLAZO TICKET CONTADO" },
+  { value: "OTROS", text: "OTROS SERVICIOS" },
+  { value: "TRANSFERENCIAM", text: "TRANSFERENCIA DE MATERIAL" }
+];
+
+console.log('opciones '+JSON.stringify(opciones));
+opciones.forEach(op => {
+  const option = document.createElement("option");
+  option.value = op.value;
+  option.textContent = op.text;
+  select.appendChild(option);
+});
+
+
       hideProgress();
       data.push({ RAZON: "OTRO" });
       clients = data;
       onfinish();
     });
+
+
+
   }
 
   function saveDoc(length) {
