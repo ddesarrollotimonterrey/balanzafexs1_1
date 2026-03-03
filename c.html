@@ -2132,12 +2132,16 @@ send("server.php",  { call: "get_usuario_disponible", user: getSesion("userPeaje
         console.log("Opciones finales:", opciones);
 
         // Pintar opciones
-        opciones.forEach(op => {
-            const option = document.createElement("option");
-            option.value = op.value;
-            option.textContent = op.text;
-            select.appendChild(option);
-        });
+       opciones.forEach(op => {
+    const option = document.createElement("option");
+    option.value = op.value;
+    option.textContent = op.text;
+    select.appendChild(option);
+});
+
+// 🔥 REINICIALIZAR SELECT
+var elems = document.querySelectorAll('select');
+M.FormSelect.init(elems);
 
     }
 );
