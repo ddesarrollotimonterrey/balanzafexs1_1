@@ -2108,7 +2108,7 @@
   function loadComponents(onfinish) { 
     setProgressMsg("Cargando...");
     send("server.php", { call: "getRazones" }, function (data) {
-send("server.php",  { call: "get_usuario_disponible", user: getSesion("userPeaje") },  function (response) {
+    send("server.php",  { call: "get_usuario_disponible", user: getSesion("userPeaje") },  function (response) {
 
         const select = document.getElementById("origen");
         select.innerHTML = ""; // limpiar opciones
