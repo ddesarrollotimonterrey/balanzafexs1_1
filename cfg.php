@@ -14,7 +14,7 @@ define('db_importaciones', 'importaciones');
 define('user_importaciones', 'root');
 define('pass_importaciones', '123456789-');
 
-
+define('db_entrega', 'entrega_db');
 
 define('DB_HOST_soli', 'localhost');
 define('DB_USER_soli', 'root');//Usuario de tu base de datos
