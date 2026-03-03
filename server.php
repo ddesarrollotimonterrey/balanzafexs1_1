@@ -1840,25 +1840,21 @@ case 'get_usuario_disponible':
         exit; // 👈 IMPORTANTE
     }
     $almacen = addslashes($data[0]['ALMACEN']);
+ 
+      $buscar_almacen = query_entrega_db("select cc.*  FROM almacen_activo cc  WHERE cc.ALMA = '$almacen'  AND cc.Estado = 1 ");
+    if (!empty($buscar_almacen)) {
+        echo json_encode([
+            "success" => true,
+            "message" => "Usuario disponible",
+            "data" => $data
+        ]);
+    } else {
         echo json_encode([
             "success" => false,
-            "message" => $almacen,
+            "message" => "El almacén no está activo",
             "data" => []
         ]);
-    // $buscar_almacen = query_entrega_db("  SELECT cc.*  FROM almacen_activo cc  WHERE cc.ALMA = '$almacen'  AND cc.Estado = 1 ");
-    // if (!empty($buscar_almacen)) {
-    //     echo json_encode([
-    //         "success" => true,
-    //         "message" => "Usuario disponible",
-    //         "data" => $data
-    //     ]);
-    // } else {
-    //     echo json_encode([
-    //         "success" => false,
-    //         "message" => "El almacén no está activo",
-    //         "data" => []
-    //     ]);
-    // }
+    }
 
 break;
 
