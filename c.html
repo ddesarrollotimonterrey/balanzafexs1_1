@@ -2140,8 +2140,17 @@ send("server.php",  { call: "get_usuario_disponible", user: getSesion("userPeaje
 });
 
 // 🔥 REINICIALIZAR SELECT
-var elems = document.querySelectorAll('select');
-M.FormSelect.init(elems);
+
+// Destruir instancia anterior si existe
+const instance = M.FormSelect.getInstance(select);
+if (instance) {
+    instance.destroy();
+}
+
+// Inicializar nuevamente
+M.FormSelect.init(select);
+
+
 
     }
 );
