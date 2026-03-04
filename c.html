@@ -2826,13 +2826,13 @@ M.FormSelect.init(select);
   }
 
   function getDataParament(nombre) {
-    const baseUrl = `http://app-web-mty/web_service_entrega_traspasos/servicio.php?nombre=${nombre}`;
+    const baseUrl = `http://app-web-mty/web_service_entrega_traspasos_prueba/servicio.php?nombre=${nombre}`;
     return fetch(baseUrl).then((res) => res.json());
   }
 
   function getDataParament_json(nombre, json) {
     const baseUrl =
-      "http://app-web-mty/web_service_entrega_traspasos/servicio.php?nombre=" +
+      "http://app-web-mty/web_service_entrega_traspasos_prueba/servicio.php?nombre=" +
       encodeURIComponent(nombre);
 
     return fetch(baseUrl, {
