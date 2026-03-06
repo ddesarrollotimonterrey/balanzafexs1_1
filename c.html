@@ -2711,8 +2711,10 @@ M.FormSelect.init(select);
       );
       mensaje_almacen(header, resp.Mensaje, {
         texto: "OK",
-        callback: () => finishPesaje(),
-      });
+        callback: () =>  {
+         // finishPesaje();
+          alert('No se va a registrar el pesaje porque es un sistema de prueba');
+        }});
     } catch (error) {
       manejarError(header, error);
     }
