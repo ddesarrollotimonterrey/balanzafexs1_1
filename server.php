@@ -1847,7 +1847,7 @@ case 'get_usuario_disponible':
         echo json_encode([
             "success" => true,
             "message" => "Usuario disponible",
-            "data" => $data
+            "data" => $buscar_almacen
         ]);
     } else {
         echo json_encode([
