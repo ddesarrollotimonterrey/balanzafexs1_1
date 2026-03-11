@@ -2093,16 +2093,16 @@
         ];
         // 👉 Si el usuario está disponible, agregar transferencia
         if (response.success === true) {
-          const lista_p = (response);
-          //  let valuee = JSON.parse(lista_p[0].value);
-          //  let textt = JSON.parse(lista_p[0].text);
+          const lista_p = JSON.stringify(response);
+          let valuee = (lista_p[0].value);
+          let textt = (lista_p[0].text);
           // opciones.push({
           //   value: "TRANSFERENCIAM" ,
           //   text: "TRANSFERENCIA DE MATERIAL"
           // });
           opciones.push({
-            value:lista_p,
-            text: response
+            value:valuee,
+            text: textt
           });
         }
         console.log("Opciones finales:", opciones);
