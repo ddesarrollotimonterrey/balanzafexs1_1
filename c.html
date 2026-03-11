@@ -2093,7 +2093,7 @@
         ];
         // 👉 Si el usuario está disponible, agregar transferencia
         if (response.success === true) {
-          const lista_p = JSON.stringify(response);
+          const lista_p = JSON.stringify(response.data);
           let valuee = (lista_p[0].value);
           let textt = (lista_p[0].text);
           // opciones.push({
