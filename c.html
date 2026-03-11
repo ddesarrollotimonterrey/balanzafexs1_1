@@ -4,8 +4,7 @@
       <div class="nav-wrapper" style="background: var(--theme-color)">
         <a id="title" class="brand-logo" style="left: 0.5em"></a>
         <ul class="right">
-          <li id="exit" class="tooltip" data-position="left"
-            data-tooltip="Cerrar">
+          <li id="exit" class="tooltip" data-position="left" data-tooltip="Cerrar">
             <a id="go_back"><i class="material-icons">close</i></a>
           </li>
         </ul>
@@ -27,26 +26,22 @@
     <div class="row" style="padding: 0.5em">
       <div class="col s4">
         <div class="input-field col s6">
-          <input id="fecha1" type="text" class="form" autocomplete="off"
-            disabled /><label for="fecha"
+          <input id="fecha1" type="text" class="form" autocomplete="off" disabled /><label for="fecha"
             class="label">PRIMER PESAJE</label>
         </div>
         <div class="input-field col s6">
-          <input id="fecha2" type="text" class="form" autocomplete="off"
-            disabled /><label for="hora"
+          <input id="fecha2" type="text" class="form" autocomplete="off" disabled /><label for="hora"
             class="label">SEGUNDO PESAJE</label>
         </div>
         <div class="input-field col s6">
-          <input id="usuario" type="text" class="form" autocomplete="off"
-            disabled /><label for="usuario"
+          <input id="usuario" type="text" class="form" autocomplete="off" disabled /><label for="usuario"
             class="label">USUARIO</label>
         </div>
       </div>
       <div class="col s4"></div>
       <div class="col s4">
         <div class="input-field col s6">
-          <input id="sucursal" type="text" class="form" autocomplete="off"
-            disabled /><label for="sucursal"
+          <input id="sucursal" type="text" class="form" autocomplete="off" disabled /><label for="sucursal"
             class="label">SUCURSAL</label>
         </div>
         <div class="input-field col s6">
@@ -59,21 +54,18 @@
         </div>
         <div class="input-field col s6"></div>
         <div class="input-field col s6">
-          <input id="ticket" type="text" class="form" autocomplete="off"
-            disabled /><label for="ticket"
+          <input id="ticket" type="text" class="form" autocomplete="off" disabled /><label for="ticket"
             class="label">TICKET</label>
         </div>
       </div>
-      <div class="col s12"
-        style="height: 1px; background: rgba(0, 0, 0, 0.14)"></div>
+      <div class="col s12" style="height: 1px; background: rgba(0, 0, 0, 0.14)"></div>
 
       <div class="col s6 card">
         <span class="card-title col s12">SERVICIO</span>
         <div class="input-field col s12">
           <!-- <form action="otros.php" method="post"  target="_blank"  id="regi" name="regi"> -->
           <form action="otros.php" method="post" id="regi" name="regi">
-            <input type="text" style="display: none" name="code" id="code"
-              value="0" />
+            <input type="text" style="display: none" name="code" id="code" value="0" />
           </form>
 
           <!--cargado1-->
@@ -110,36 +102,27 @@
       <div class="col s12 card">
         <span class="card-title col s12">VEHICULO</span>
         <div class="input-field col s2">
-          <input id="placa" type="text" maxlength="9" class="form autocomplete"
-            autocomplete="off"
-            placeholder="Ingresar" /><label for="placa"
-            class="label">PLACA</label>
+          <input id="placa" type="text" maxlength="9" class="form autocomplete" autocomplete="off"
+            placeholder="Ingresar" /><label for="placa" class="label">PLACA</label>
         </div>
         <div class="input-field col s2">
-          <input id="marca" maxlength="14" type="text" class="form"
-            autocomplete="off" placeholder="Ingresar" /><label
+          <input id="marca" maxlength="14" type="text" class="form" autocomplete="off" placeholder="Ingresar" /><label
             for="marca" class="label">MARCA</label>
         </div>
         <div class="input-field col s2">
-          <input id="color" maxlength="14" type="text" class="form"
-            autocomplete="off" placeholder="Ingresar" /><label
+          <input id="color" maxlength="14" type="text" class="form" autocomplete="off" placeholder="Ingresar" /><label
             for="color" class="label">COLOR</label>
         </div>
         <div class="input-field col s3">
-          <input id="conductor" type="text" class="form" autocomplete="off"
-            maxlength="34"
-            placeholder="Ingresar" /><label for="conductor"
-            class="label">CONDUCTOR</label>
+          <input id="conductor" type="text" class="form" autocomplete="off" maxlength="34"
+            placeholder="Ingresar" /><label for="conductor" class="label">CONDUCTOR</label>
         </div>
         <div class="input-field col s2">
-          <input id="ci_conductor" type="text" class="form" autocomplete="off"
-            maxlength="15"
-            placeholder="Ingresar" /><label for="ci_conductor"
-            class="label">CI.</label>
+          <input id="ci_conductor" type="text" class="form" autocomplete="off" maxlength="15"
+            placeholder="Ingresar" /><label for="ci_conductor" class="label">CI.</label>
         </div>
         <div class="input-field col s1">
-          <input id="ci_exp" type="text" class="form" autocomplete="off"
-            maxlength="5" placeholder="Ingresar" /><label
+          <input id="ci_exp" type="text" class="form" autocomplete="off" maxlength="5" placeholder="Ingresar" /><label
             for="ci_exp" class="label">EXP.</label>
         </div>
       </div>
@@ -147,15 +130,12 @@
       <div class="col s12 card" id="sectorFactura">
         <span class="card-title col s12">FACTURA</span>
         <div class="input-field col s3">
-          <input id="nit" type="text" class="form autocomplete"
-            autocomplete="off" maxlength="14"
+          <input id="nit" type="text" class="form autocomplete" autocomplete="off" maxlength="14"
             placeholder="Ingresar" /><label for="nit" class="label">NIT</label>
         </div>
         <div class="input-field col s9">
-          <input id="razon_social" type="text" class="form" autocomplete="off"
-            maxlength="49"
-            placeholder="Ingresar" /><label for="razon_social"
-            class="label">RAZON SOCIAL</label>
+          <input id="razon_social" type="text" class="form" autocomplete="off" maxlength="49"
+            placeholder="Ingresar" /><label for="razon_social" class="label">RAZON SOCIAL</label>
         </div>
       </div>
 
@@ -163,39 +143,32 @@
         <span class="card-title col s12">PESAJE</span>
         <div class="col s4">
           <div class="input-field col s6">
-            <input id="peso1" type="text" class="form int" autocomplete="off"
-              readonly /><label for="peso1"
+            <input id="peso1" type="text" class="form int" autocomplete="off" readonly /><label for="peso1"
               class="label">PESO TARA (KG)</label>
           </div>
-          <button id="getPeso1" class="waves-effect btn"
-            style="margin-top: 1.5em">
+          <button id="getPeso1" class="waves-effect btn" style="margin-top: 1.5em">
             Obtener
           </button>
         </div>
         <div class="col s4">
           <div class="input-field col s6">
-            <input id="peso2" type="text" class="form int" autocomplete="off"
-              readonly /><label for="peso2"
+            <input id="peso2" type="text" class="form int" autocomplete="off" readonly /><label for="peso2"
               class="label">PESO BRUTO
               (KG)</label>
           </div>
-          <button id="getPeso2" class="waves-effect btn"
-            style="margin-top: 1.5em">
+          <button id="getPeso2" class="waves-effect btn" style="margin-top: 1.5em">
             Obtener
           </button>
         </div>
         <div class="col s4">
           <div class="input-field col s4">
-            <input id="neto" type="text" class="form int" autocomplete="off"
-              readonly /><label for="neto"
+            <input id="neto" type="text" class="form int" autocomplete="off" readonly /><label for="neto"
               class="label">NETO (KG)</label>
           </div>
         </div>
       </div>
 
-      <button id="saver"
-        class="btn-floating btn-large waves-effect blue hide tooltip"
-        data-position="left"
+      <button id="saver" class="btn-floating btn-large waves-effect blue hide tooltip" data-position="left"
         data-tooltip="Guardar" style="position: fixed; bottom: 1em; right: 1em">
         <i class="material-icons">save</i>
       </button>
@@ -657,7 +630,7 @@
               title = "Desea Guardar los datos actuales?";
             }
             setProgressMsg("Verificando...");
-            const datad = await sendAsync("server.php", {call: "get_datos_user"});
+            const datad = await sendAsync("server.php", { call: "get_datos_user" });
             if (!datad?.length) {
               hideProgress();
               alert("No se recibieron datos del usuario.");
@@ -669,7 +642,7 @@
               alert("Usuario no encontrado.");
               return;
             }
-            const data = await sendAsync("server.php", {call: "getData_info", user: userr,});
+            const data = await sendAsync("server.php", { call: "getData_info", user: userr, });
             if (!data?.length) {
               hideProgress();
               alert(`No se recibieron datos de la balanza para ${userr}`);
@@ -684,38 +657,38 @@
 
             var candena = getVal("placa");
             var procesado = candena.trim();
-            const datap = await sendAsync("server.php", {call: "getPlacaCP", idSesion: getSesion("idSesion"),  placa: procesado});
-            if (datap.length>0) {
-                if (getVal("ticket") != "0") {
-                  await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
-                     return;
-                }
-               if (getVal("ticket") === "0") {
-                  await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
-                 return;
-                }
-                if (datap.length > 1) {
-                  var tdetalle = "";
-                  for (ii = 0; ii < datap.length; ii++) {
-                    var ccf = ii + 1;
-                    if ((datap[ii]["U_Estado"] == "1") | (datap[ii]["U_Estado"] == "4") ) {
-                      var dadf =ccf + `. Este Nº de placa tiene un documento pendiente de finalizacion (Ticket : ${datap[ii]["U_NroTicket"]})  en la ${datap[ii]["U_Sucursal"]}, tipo de Servicio  ${datap[ii]["U_Origen"]}`;
-                      tdetalle = tdetalle + "<br>" + dadf;
-                    }
+            const datap = await sendAsync("server.php", { call: "getPlacaCP", idSesion: getSesion("idSesion"), placa: procesado });
+            if (datap.length > 0) {
+              if (getVal("ticket") != "0") {
+                await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
+                return;
+              }
+              if (getVal("ticket") === "0") {
+                await ejecutar_armo_array(armo_array, "TRANSFERENCIA DE MATERIAL", data, datad);
+                return;
+              }
+              if (datap.length > 1) {
+                var tdetalle = "";
+                for (ii = 0; ii < datap.length; ii++) {
+                  var ccf = ii + 1;
+                  if ((datap[ii]["U_Estado"] == "1") | (datap[ii]["U_Estado"] == "4")) {
+                    var dadf = ccf + `. Este Nº de placa tiene un documento pendiente de finalizacion (Ticket : ${datap[ii]["U_NroTicket"]})  en la ${datap[ii]["U_Sucursal"]}, tipo de Servicio  ${datap[ii]["U_Origen"]}`;
+                    tdetalle = tdetalle + "<br>" + dadf;
                   }
-                  hideProgress();
-                  return;
                 }
-            }else{
+                hideProgress();
+                return;
+              }
+            } else {
               hideProgress();
               alert(`No existe datos de placa`);
               return;
             }
 
-              
-              
 
-     
+
+
+
 
 
 
@@ -2104,68 +2077,59 @@
     });
   }
 
- // cargado1
-  function loadComponents(onfinish) { 
+  // cargado1
+  function loadComponents(onfinish) {
     setProgressMsg("Cargando...");
     send("server.php", { call: "getRazones" }, function (data) {
-    send("server.php",  { call: "get_usuario_disponible", user: getSesion("userPeaje") },  function (response) {
-
+      send("server.php", { call: "get_usuario_disponible", user: getSesion("userPeaje") }, function (response) {
         const select = document.getElementById("origen");
         select.innerHTML = ""; // limpiar opciones
-
         // Opciones base (SIEMPRE)
         const opciones = [
-            { value: "CONTADO", text: "CONTADO" },
-            { value: "CREDITO", text: "CREDITO" },
-            { value: "REEMPLAZO_CONTADO", text: "REEMPLAZO TICKET CONTADO" },
-            { value: "OTROS", text: "OTROS SERVICIOS" }
+          { value: "CONTADO", text: "CONTADO" },
+          { value: "CREDITO", text: "CREDITO" },
+          { value: "REEMPLAZO_CONTADO", text: "REEMPLAZO TICKET CONTADO" },
+          { value: "OTROS", text: "OTROS SERVICIOS" }
         ];
-
         // 👉 Si el usuario está disponible, agregar transferencia
         if (response.success === true) {
-            opciones.push({
-                value: "TRANSFERENCIAM",
-                text: "TRANSFERENCIA DE MATERIAL"
-            });
+           const lista_p = JSON.parse(response);
+           let valuee = JSON.parse(lista_p[0].value);
+           let textt = JSON.parse(lista_p[0].text);
+          // opciones.push({
+          //   value: "TRANSFERENCIAM" ,
+          //   text: "TRANSFERENCIA DE MATERIAL"
+          // });
+          opciones.push({
+            value: valuee,
+            text: textt
+          });
         }
-
         console.log("Opciones finales:", opciones);
-
         // Pintar opciones
-       opciones.forEach(op => {
-    const option = document.createElement("option");
-    option.value = op.value;
-    option.textContent = op.text;
-    select.appendChild(option);
-});
-
-// 🔥 REINICIALIZAR SELECT
-
-// Destruir instancia anterior si existe
-const instance = M.FormSelect.getInstance(select);
-if (instance) {
-    instance.destroy();
-}
-
-// Inicializar nuevamente
-M.FormSelect.init(select);
-
-
-
-    }
-);
-
-
-
+        opciones.forEach(op => {
+          const option = document.createElement("option");
+          option.value = op.value;
+          option.textContent = op.text;
+          select.appendChild(option);
+        });
+        // 🔥 REINICIALIZAR SELECT
+        // Destruir instancia anterior si existe
+        const instance = M.FormSelect.getInstance(select);
+        if (instance) {
+          instance.destroy();
+        }
+        // Inicializar nuevamente
+        M.FormSelect.init(select);
+      });
       hideProgress();
       data.push({ RAZON: "OTRO" });
       clients = data;
       onfinish();
     });
-
-
-
   }
+
+
 
   function saveDoc(length) {
     var sw = true;
@@ -2711,10 +2675,11 @@ M.FormSelect.init(select);
       );
       mensaje_almacen(header, resp.Mensaje, {
         texto: "OK",
-        callback: () =>  {
-         // finishPesaje();
+        callback: () => {
+          // finishPesaje();
           alert('No se va a registrar el pesaje porque es un sistema de prueba');
-        }});
+        }
+      });
     } catch (error) {
       manejarError(header, error);
     }
