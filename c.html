@@ -2094,15 +2094,9 @@
         // 👉 Si el usuario está disponible, agregar transferencia
         if (response.success === true) {
           const lista_p = (response.data);
-          let valuee = (lista_p[0].value);
-          let textt = (lista_p[0].text);
-          // opciones.push({
-          //   value: "TRANSFERENCIAM" ,
-          //   text: "TRANSFERENCIA DE MATERIAL"
-          // });
           opciones.push({
-            value:valuee,
-            text: lista_p+' '+lista_p[0].text
+            value:lista_p[0].value,
+            text:lista_p[0].text
           });
         }
         console.log("Opciones finales:", opciones);
