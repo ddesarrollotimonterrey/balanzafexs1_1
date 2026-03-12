@@ -1965,36 +1965,22 @@
                 }
                 if (data[0]["U_Origen"] == "CONTADO") {
                   dato_td = 0;
-
-                  querySelector("#sectorFactura").innerHTML =
-                    `<span class="card-title col s12">FACTURA</span>
-               <div class="input-field col s3"><input id="nit"  type="text" class="form"  autocomplete="off"  maxlength="49" value="${data[0]["U_NIT"]}" placeholder="Ingresar"  disabled><label for="nit" class="label">NUMERO DE IDENTIFICACION</label></div>
-               <div class="input-field col s9"><input id="razon_social" type="text" class="form" autocomplete="off" maxlength="49" value="${data[0]["U_RazonSocial"]}" placeholder="Ingresar" disabled><label for="razon_social" class="label">RAZON SOCIAL</label></div>`;
+                  querySelector("#sectorFactura").innerHTML = `<span class="card-title col s12">FACTURA</span>  <div class="input-field col s3"><input id="nit"  type="text" class="form"  autocomplete="off"  maxlength="49" value="${data[0]["U_NIT"]}" placeholder="Ingresar"  disabled><label for="nit" class="label">NUMERO DE IDENTIFICACION</label></div>   <div class="input-field col s9"><input id="razon_social" type="text" class="form" autocomplete="off" maxlength="49" value="${data[0]["U_RazonSocial"]}" placeholder="Ingresar" disabled><label for="razon_social" class="label">RAZON SOCIAL</label></div>`;
                   refresh();
                   querySelector("#documentos").innerHTML =
                     `<input id="fact" type="text" autocomplete="off" value="${data[0]["U_NroDocFactura"]}" readonly=""><label for="fact" class="label active">Nº Documento</label>`;
                 } else {
                   if (data[0]["U_Origen"] == "TRANSFERENCIAM") {
-                    querySelector("#sectorFactura").innerHTML = `
-                 <div class="input-field col s6">
+                    querySelector("#sectorFactura").innerHTML = `<div class="input-field col s6">
                  <input id="razon_social" type="text" class="form" autocomplete="off" value="${data[0]["U_RazonSocial"]}" maxlength="49" disabled>
                  <label for="razon_social" class="label active">RAZON SOCIALc</label></div> 
-
                  <div class="input-field col s6">
                  <input id="numerotraspaso" type="text" class="form" autocomplete="off" value="${data[0]["U_Observaciones"]}" maxlength="49" disabled>
                  <label for="numerotraspaso" class="label active">N.º de Traspaso de Material</label></div>`;
                   } else {
-                    querySelector("#sectorFactura").innerHTML =
-                      `<div class="input-field col s9">
-                <input id="razon_social" type="text" class="form" autocomplete="off" value="${data[0]["U_RazonSocial"]}" maxlength="49" disabled>
-                <label for="razon_social" class="label active">RAZON SOCIALc</label></div>`;
-                    if (
-                      data[0]["U_Origen"] == "CREDITO" &&
-                      getVal("estado") == 2
-                    ) {
-                      querySelector("#documentos").innerHTML =
-                        `<button id="showDoc" class="waves-effect btn">DOCUMENTOS</button>`;
-                      querySelector("#showDoc").onclick = showDoc;
+                    querySelector("#sectorFactura").innerHTML = `<div class="input-field col s9"> <input id="razon_social" type="text" class="form" autocomplete="off" value="${data[0]["U_RazonSocial"]}" maxlength="49" disabled>  <label for="razon_social" class="label active">RAZON SOCIALc</label></div>`;
+                    if (  data[0]["U_Origen"] == "CREDITO" && getVal("estado") == 2 ) {
+                      querySelector("#documentos").innerHTML = `<button id="showDoc" class="waves-effect btn">DOCUMENTOS</button>`; querySelector("#showDoc").onclick = showDoc;
                     }
                   }
                 }
